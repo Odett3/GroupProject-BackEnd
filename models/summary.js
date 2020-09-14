@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      summary.belongsTo(models.user), summary.hasOne(models.topic);
+      summary.belongsTo(models.user), summary.belongsTo(models.topic);
     }
   }
   summary.init(
