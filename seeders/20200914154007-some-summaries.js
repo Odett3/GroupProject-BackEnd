@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -7,20 +7,25 @@ module.exports = {
       [
         {
           description: "Test123",
+          userId: 1,
+          topicId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           description: "Test456",
+          userId: 2,
+          topicId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           description: "Test789",
+          userId: 3,
+          topicId: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
-        
       ],
       {}
     );
