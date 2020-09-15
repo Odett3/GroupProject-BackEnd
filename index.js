@@ -7,6 +7,8 @@ const summariesRouter = require("./routers/summaries");
 const topicsRouter = require("./routers/topics");
 const authMiddleWare = require("./auth/middleware");
 
+const User = require("./models/").user;
+
 const app = express();
 
 /**
@@ -122,9 +124,10 @@ if (process.env.DELAY) {
  */
 
 // GET endpoint for testing purposes, can be removed
-app.get("/", (req, res) => {
-  res.send("Hi from express");
-});
+// app.get("/users", async (req, res) => {
+//   const users = await User.findAll();
+//   res.status(200).send({ message: "ok", users });
+// });
 
 // POST endpoint for testing purposes, can be removed
 app.post("/echo", (req, res) => {
