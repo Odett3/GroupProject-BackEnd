@@ -11,7 +11,7 @@ module.exports = {
         {
           name: "Odette",
           surname: "Pule",
-          class: 43,
+          classNumber: 43,
           email: "odette@test.com",
           password: bcrypt.hashSync("Odette", SALT_ROUNDS),
           image: "test",
@@ -21,7 +21,7 @@ module.exports = {
         {
           name: "Alex",
           surname: "Cheuk",
-          class: 43,
+          classNumber: 43,
           email: "Alex@test.com",
           password: bcrypt.hashSync("Alex", SALT_ROUNDS),
           image: "test",
@@ -31,7 +31,7 @@ module.exports = {
         {
           name: "Tom",
           surname: "Vos",
-          class: 43,
+          classNumber: 43,
           email: "tom@test.com",
           password: bcrypt.hashSync("Tom", SALT_ROUNDS),
           image: "test",
