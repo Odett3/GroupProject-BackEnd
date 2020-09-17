@@ -9,6 +9,7 @@ const { SALT_ROUNDS } = require('../config/constants')
 const router = new Router()
 
 router.post('/login', async (req, res, next) => {
+	
 	try {
 		const { email, password } = req.body
 
