@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const Topic = require("../models").topic;
+const Summary = require("../models").summary;
 
 const router = new Router();
 
@@ -24,6 +25,21 @@ router.get("/:id", async (req, res) => {
   }
 
   res.status(200).send({ message: "ok", topic});
+});
+
+router.post("/:id", async (req, res) => {
+  const { description, userId, topicId } = req.body;
+  if (!description || !userId || !topicId) {
+    res.status(400).send({message: "Something went wrong. Please make sure you are logged in and have written a summary"})
+  }
+
+  const newSummary = await Summary.create({
+    description,
+    userId,
+    topicId,
+  })
+  
+  res.status(200).send({ message: "ok", newSummary });
 });
 
 module.exports = router;
